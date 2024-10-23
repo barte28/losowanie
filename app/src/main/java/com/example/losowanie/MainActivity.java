@@ -1,5 +1,6 @@
 package com.example.losowanie;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -66,5 +67,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.i("CYKL ŻYCIA","Wykonana metoda onPause");
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i("CYKL ŻYCIA","Wykonana metoda onSaveInstanceState");
     }
 }
